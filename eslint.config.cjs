@@ -1,7 +1,4 @@
-
-
-
-export default defineConfig({
+module.exports = {
   // root: true,
   env: { browser: true, es2020: true },
   globals: {
@@ -30,4 +27,6 @@ export default defineConfig({
     '@typescript-eslint/ban-ts-comment': 'off',
     'prettier/prettier': ['error', { printWidth: 120 }],
   },
-});
+};
+
+
