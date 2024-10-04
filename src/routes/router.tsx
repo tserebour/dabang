@@ -13,7 +13,7 @@ const Page404 = lazy(() => import('pages/errors/Page404'));
 import PageLoader from 'components/loading/PageLoader';
 import Progress from 'components/loading/Progress';
 import Leaderboard from 'pages/leaderboard/Leaderboard';
-import { Feedback } from '@mui/icons-material';
+
 import UserFeedback from 'pages/userfeedback/UserFeedback';
 import ProjectDashboard from 'pages/projectdashboard/ProjectDashboard';
 

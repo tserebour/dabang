@@ -18,12 +18,7 @@ const SearchFilter = ({ apiRef, ...props }: SearchFilterProps) => {
   return (
     <TextField
       InputProps={{
-        startAdornment: (
-          <IconifyIcon
-            icon="gravity-ui:magnifier"
-            sx={{ color: 'primary.main', fontSize: 32, mr: 1 }}
-          />
-        ),
+        startAdornment: <IconifyIcon icon="gravity-ui:magnifier" sx={{ color: 'primary.main', fontSize: 32, mr: 1 }} />,
       }}
       type="search"
       variant="filled"

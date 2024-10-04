@@ -12,10 +12,7 @@ const Notification = () => {
       }}
     >
       <Badge badgeContent=" " variant="dot">
-        <IconifyIcon
-          icon="clarity:notification-line"
-          sx={{ fontSize: 24, color: 'warning.main' }}
-        />
+        <IconifyIcon icon="clarity:notification-line" sx={{ fontSize: 24, color: 'warning.main' }} />
       </Badge>
     </Button>
   );

@@ -10,5 +10,4 @@ export default {
   leaderboard: `/${rootPaths.pagesRoot}/leaderboard`,
   feedback: `/${rootPaths.pagesRoot}/feedback`,
   projectdashboard: `/${rootPaths.pagesRoot}/projectdashboard`,
-  
 };

@@ -15,13 +15,7 @@ const columns: GridColDef<(typeof rows)[number]>[] = [
     renderCell: (params) => {
       return (
         <Stack justifyContent="center" height={1}>
-          <Typography
-            variant="h6"
-            component={Link}
-            href="#!"
-            color="text.primary"
-            sx={{ width: 'max-content' }}
-          >
+          <Typography variant="h6" component={Link} href="#!" color="text.primary" sx={{ width: 'max-content' }}>
             {params.row.assigned.name}
           </Typography>
           <Typography variant="subtitle2">{params.row.assigned.role}</Typography>
@@ -74,12 +68,7 @@ const ProductPerformance = () => {
 
   return (
     <Paper sx={{ p: 3 }}>
-      <Stack
-        direction={{ md: 'row' }}
-        rowGap={2}
-        justifyContent="space-between"
-        alignItems={{ md: 'center' }}
-      >
+      <Stack direction={{ md: 'row' }} rowGap={2} justifyContent="space-between" alignItems={{ md: 'center' }}>
         <Typography variant="h4" color="primary.dark">
           Product Performance
         </Typography>

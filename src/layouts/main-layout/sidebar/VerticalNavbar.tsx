@@ -9,18 +9,9 @@ interface VerticalNavbarProps extends DrawerProps {
   onHandleDrawerClose: () => void;
 }
 
-const VerticalNavbar = ({
-  drawerWidth,
-  mobileOpen,
-  onTransitionEnd,
-  onHandleDrawerClose,
-}: VerticalNavbarProps) => {
+const VerticalNavbar = ({ drawerWidth, mobileOpen, onTransitionEnd, onHandleDrawerClose }: VerticalNavbarProps) => {
   return (
-    <Box
-      component="nav"
-      sx={{ width: { lg: drawerWidth }, flexShrink: { sm: 0 } }}
-      aria-label="drawer"
-    >
+    <Box component="nav" sx={{ width: { lg: drawerWidth }, flexShrink: { sm: 0 } }} aria-label="drawer">
       <Drawer
         variant="temporary"
         open={mobileOpen}

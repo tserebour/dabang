@@ -1,12 +1,4 @@
-import {
-  Chip,
-  LinearProgress,
-  TableCell,
-  TableRow,
-  Typography,
-  alpha,
-  useTheme,
-} from '@mui/material';
+import { Chip, LinearProgress, TableCell, TableRow, Typography, alpha, useTheme } from '@mui/material';
 import { Product } from 'data/top-products';
 
 const TopProduct = ({ product }: { product: Product }) => {

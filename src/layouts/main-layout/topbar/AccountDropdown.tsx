@@ -1,13 +1,4 @@
-import {
-  Avatar,
-  Box,
-  Button,
-  ListItemIcon,
-  Menu,
-  MenuItem,
-  Stack,
-  Typography,
-} from '@mui/material';
+import { Avatar, Box, Button, ListItemIcon, Menu, MenuItem, Stack, Typography } from '@mui/material';
 import { MouseEvent, useState } from 'react';
 import Profile from 'assets/Profile.webp';
 import IconifyIcon from 'components/base/IconifyIcon';
@@ -57,11 +48,7 @@ const AccountDropdown = () => {
       }}
     >
       <ListItemIcon>
-        <IconifyIcon
-          icon={menuItem.icon}
-          sx={{ color: 'primary.main' }}
-          className="account-menu-icon"
-        />
+        <IconifyIcon icon={menuItem.icon} sx={{ color: 'primary.main' }} className="account-menu-icon" />
       </ListItemIcon>
       <Typography variant="body1">{menuItem.label}</Typography>
     </MenuItem>

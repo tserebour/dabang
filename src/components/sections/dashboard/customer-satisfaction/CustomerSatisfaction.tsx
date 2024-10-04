@@ -44,11 +44,7 @@ const CustomerSatisfaction = () => {
         Customer Satisfaction On Projects
       </Typography>
 
-      <CustomerSatisfactionChart
-        chartRef={chartRef}
-        data={customerSatisfaction}
-        style={{ height: 182 }}
-      />
+      <CustomerSatisfactionChart chartRef={chartRef} data={customerSatisfaction} style={{ height: 182 }} />
 
       <Stack
         direction="row"

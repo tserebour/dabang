@@ -14,10 +14,7 @@ const VolumeVsService = () => {
   });
 
   const totalVolume = useMemo(() => getTotal(volumeVsService.volume), [volumeVsService.volume]);
-  const totalServices = useMemo(
-    () => getTotal(volumeVsService.services),
-    [volumeVsService.services],
-  );
+  const totalServices = useMemo(() => getTotal(volumeVsService.services), [volumeVsService.services]);
 
   const handleLegendToggle = (name: keyof typeof legend) => {
     setLegend((prevState) => ({
@@ -40,12 +37,7 @@ const VolumeVsService = () => {
         Water distributed Vs Service level
       </Typography>
 
-      <VolumeVsServiceChart
-        chartRef={chartRef}
-        data={volumeVsService}
-        style={{ height: 182 }}
-        sx={{ pb: 1 }}
-      />
+      <VolumeVsServiceChart chartRef={chartRef} data={volumeVsService} style={{ height: 182 }} sx={{ pb: 1 }} />
 
       <Stack
         direction="row"

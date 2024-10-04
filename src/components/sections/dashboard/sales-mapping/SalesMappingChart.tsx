@@ -1,12 +1,7 @@
 import { SxProps, useTheme } from '@mui/material';
 import { MutableRefObject, useMemo } from 'react';
 import * as echarts from 'echarts/core';
-import {
-  TooltipComponent,
-  TooltipComponentOption,
-  GeoComponent,
-  GeoComponentOption,
-} from 'echarts/components';
+import { TooltipComponent, TooltipComponentOption, GeoComponent, GeoComponentOption } from 'echarts/components';
 import { MapChart, MapSeriesOption } from 'echarts/charts';
 import { CanvasRenderer } from 'echarts/renderers';
 import { CallbackDataParams } from 'echarts/types/src/util/types.js';
@@ -19,9 +14,7 @@ echarts.use([TooltipComponent, GeoComponent, MapChart, CanvasRenderer]);
 //@ts-ignore
 echarts.registerMap('world', { geoJSON: world });
 
-type EChartsOption = echarts.ComposeOption<
-  TooltipComponentOption | GeoComponentOption | MapSeriesOption
->;
+type EChartsOption = echarts.ComposeOption<TooltipComponentOption | GeoComponentOption | MapSeriesOption>;
 
 interface SalesMappingChartProps {
   salesMappingChartRef: MutableRefObject<EChartsReactCore | null>;

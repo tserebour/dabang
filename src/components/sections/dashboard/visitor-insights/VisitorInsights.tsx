@@ -35,11 +35,7 @@ const VisitorInsights = () => {
         Progress Report per Year
       </Typography>
 
-      <VisitorInsightsChart
-        chartRef={chartRef}
-        data={visitorInsightsData}
-        style={{ height: 176 }}
-      />
+      <VisitorInsightsChart chartRef={chartRef} data={visitorInsightsData} style={{ height: 176 }} />
 
       <Stack
         direction={{ xs: 'column', sm: 'row' }}

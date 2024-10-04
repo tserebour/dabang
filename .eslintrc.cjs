@@ -28,5 +28,6 @@ module.exports = {
     "react-hooks/exhaustive-deps": "off",
     "react-hooks/rules-of-hooks": "off",
     "@typescript-eslint/ban-ts-comment": "off",
+    // 'prettier/prettier': ['error', { printWidth: 120 }],
   },
 };

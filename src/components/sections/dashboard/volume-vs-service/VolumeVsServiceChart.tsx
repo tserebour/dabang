@@ -15,9 +15,7 @@ import ReactEchart from 'components/base/ReactEhart';
 
 echarts.use([TooltipComponent, GridComponent, LegendComponent, BarChart, CanvasRenderer]);
 
-type EChartsOption = echarts.ComposeOption<
-  TooltipComponentOption | GridComponentOption | BarSeriesOption
->;
+type EChartsOption = echarts.ComposeOption<TooltipComponentOption | GridComponentOption | BarSeriesOption>;
 
 interface VolumeVsServiceChartProps {
   chartRef: MutableRefObject<EChartsReactCore | null>;
@@ -92,15 +90,7 @@ const VolumeVsServiceChart = ({ chartRef, data, style, ...rest }: VolumeVsServic
     return option;
   }, [theme, data]);
 
-  return (
-    <ReactEchart
-      echarts={echarts}
-      option={volumeVsServiceChartOption}
-      ref={chartRef}
-      style={style}
-      {...rest}
-    />
-  );
+  return <ReactEchart echarts={echarts} option={volumeVsServiceChartOption} ref={chartRef} style={style} {...rest} />;
 };
 
 export default VolumeVsServiceChart;

@@ -74,7 +74,7 @@ const sitemap: MenuItem[] = [
     pathName: 'order',
     icon: 'ph:shopping-cart-light',
   },
-  
+
   {
     id: 5,
     name: 'Sales Report',
@@ -105,7 +105,6 @@ const sitemap: MenuItem[] = [
     icon: 'humbleicons:logout',
     active: true,
   },
-  
 ];
 
 export default sitemap;

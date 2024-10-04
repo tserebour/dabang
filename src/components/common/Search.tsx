@@ -12,10 +12,7 @@ const Search = (props: SearchProps) => {
       InputProps={{
         startAdornment: (
           <InputAdornment position="start">
-            <IconifyIcon
-              icon="gravity-ui:magnifier"
-              sx={{ color: 'primary.main', fontSize: 32, mr: 1 }}
-            />
+            <IconifyIcon icon="gravity-ui:magnifier" sx={{ color: 'primary.main', fontSize: 32, mr: 1 }} />
           </InputAdornment>
         ),
       }}

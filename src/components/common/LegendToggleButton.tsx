@@ -24,11 +24,7 @@ const LegendToggleButton = ({
   legend,
   onHandleLegendToggle,
 }: LegendToggleButtonProps) => {
-  const Icon = icon ? (
-    <IconifyIcon icon={icon} sx={{ color }} />
-  ) : SvgIcon ? (
-    <SvgIcon sx={{ color }} />
-  ) : null;
+  const Icon = icon ? <IconifyIcon icon={icon} sx={{ color }} /> : SvgIcon ? <SvgIcon sx={{ color }} /> : null;
 
   return (
     <Stack>

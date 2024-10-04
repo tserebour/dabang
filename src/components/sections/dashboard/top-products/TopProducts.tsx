@@ -1,13 +1,4 @@
-import {
-  Box,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-  Typography,
-} from '@mui/material';
+import { Box, Paper, Table, TableBody, TableCell, TableHead, TableRow, Typography } from '@mui/material';
 import { topProducts } from 'data/top-products';
 import TopProduct from './TopProduct';
 

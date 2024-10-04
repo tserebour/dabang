@@ -9,23 +9,21 @@ export interface ReactEchartProps extends BoxProps {
   option: EChartsReactProps['option'];
 }
 
-const ReactEchart = forwardRef<null | EChartsReactCore, ReactEchartProps>(
-  ({ option, ...rest }, ref) => {
-    return (
-      <Box
-        component={ReactEChartsCore}
-        ref={ref}
-        option={{
-          ...option,
-          tooltip: {
-            ...option.tooltip,
-            confine: true,
-          },
-        }}
-        {...rest}
-      />
-    );
-  },
-);
+const ReactEchart = forwardRef<null | EChartsReactCore, ReactEchartProps>(({ option, ...rest }, ref) => {
+  return (
+    <Box
+      component={ReactEChartsCore}
+      ref={ref}
+      option={{
+        ...option,
+        tooltip: {
+          ...option.tooltip,
+          confine: true,
+        },
+      }}
+      {...rest}
+    />
+  );
+});
 
 export default ReactEchart;

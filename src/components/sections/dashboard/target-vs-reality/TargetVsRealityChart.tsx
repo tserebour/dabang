@@ -1,21 +1,14 @@
 import { useTheme } from '@mui/material';
 import { useMemo } from 'react';
 import * as echarts from 'echarts/core';
-import {
-  TooltipComponent,
-  TooltipComponentOption,
-  GridComponent,
-  GridComponentOption,
-} from 'echarts/components';
+import { TooltipComponent, TooltipComponentOption, GridComponent, GridComponentOption } from 'echarts/components';
 import { BarChart, BarSeriesOption } from 'echarts/charts';
 import { CanvasRenderer } from 'echarts/renderers';
 import ReactEchart from 'components/base/ReactEhart';
 
 echarts.use([TooltipComponent, GridComponent, BarChart, CanvasRenderer]);
 
-type EChartsOption = echarts.ComposeOption<
-  TooltipComponentOption | GridComponentOption | BarSeriesOption
->;
+type EChartsOption = echarts.ComposeOption<TooltipComponentOption | GridComponentOption | BarSeriesOption>;
 
 interface TargetVsRealityChartProps {
   data: {

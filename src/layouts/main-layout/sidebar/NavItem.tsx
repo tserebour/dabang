@@ -15,11 +15,7 @@ const NavItem = ({ item }: { item: MenuItem }) => {
 
   const { name, path, icon, svgIcon: SvgIcon, active, items } = item;
 
-  const Icon = icon ? (
-    <IconifyIcon icon={icon} fontSize={32} />
-  ) : SvgIcon ? (
-    <SvgIcon sx={{ fontSize: 32 }} />
-  ) : null;
+  const Icon = icon ? <IconifyIcon icon={icon} fontSize={32} /> : SvgIcon ? <SvgIcon sx={{ fontSize: 32 }} /> : null;
 
   return (
     <ListItem
@@ -49,9 +45,7 @@ const NavItem = ({ item }: { item: MenuItem }) => {
           { pl: 3, py: 2 },
         ]}
       >
-        <ListItemIcon sx={{ mr: 3, color: 'primary.light', transition: 'color 0.3s' }}>
-          {Icon}
-        </ListItemIcon>
+        <ListItemIcon sx={{ mr: 3, color: 'primary.light', transition: 'color 0.3s' }}>{Icon}</ListItemIcon>
         <ListItemText primary={name} sx={[location.pathname === path && { fontWeight: 600 }]} />
         {items && <IconifyIcon icon={open ? 'ph:caret-up-bold' : 'ph:caret-down-bold'} />}
       </ListItemButton>

@@ -7,14 +7,7 @@ interface LogoHeaderProps {
 }
 const LogoHeader = (props: LogoHeaderProps) => {
   return (
-    <Stack
-      direction="row"
-      alignItems="center"
-      columnGap={3}
-      component={Link}
-      href={rootPaths.root}
-      {...props}
-    >
+    <Stack direction="row" alignItems="center" columnGap={3} component={Link} href={rootPaths.root} {...props}>
       <Logo sx={{ fontSize: 56 }} />
       <Typography variant="h2" color="primary.darker">
         Spaar

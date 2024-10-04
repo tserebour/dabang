@@ -26,16 +26,19 @@ const UserFeedback = () => {
 
   const projects = [
     {
-      description: "Building public sanitation facilities, including latrines and sewage systems, in urban and peri-urban areas. This project focuses on reducing open defecation and improving public health.",
-      avatar: "/api/placeholder/50/50",
+      description:
+        'Building public sanitation facilities, including latrines and sewage systems, in urban and peri-urban areas. This project focuses on reducing open defecation and improving public health.',
+      avatar: '/api/placeholder/50/50',
     },
     {
-      description: "Building public sanitation facilities, including latrines and sewage systems, in urban and peri-urban areas. This project focuses on reducing open defecation and improving public health.",
-      avatar: "/api/placeholder/50/50",
+      description:
+        'Building public sanitation facilities, including latrines and sewage systems, in urban and peri-urban areas. This project focuses on reducing open defecation and improving public health.',
+      avatar: '/api/placeholder/50/50',
     },
     {
-      description: "Building public sanitation facilities, including latrines and sewage systems, in urban and peri-urban areas. This project focuses on reducing open defecation improving public health.",
-      avatar: "/api/placeholder/50/50",
+      description:
+        'Building public sanitation facilities, including latrines and sewage systems, in urban and peri-urban areas. This project focuses on reducing open defecation improving public health.',
+      avatar: '/api/placeholder/50/50',
     },
   ];
 
@@ -73,16 +76,16 @@ const UserFeedback = () => {
           <Box mx={1} bgcolor="grey.300" width={10} height={10} borderRadius="50%" />
         </Box>
 
-        <Typography variant="h5" mb={2}>FAQs</Typography>
+        <Typography variant="h5" mb={2}>
+          FAQs
+        </Typography>
 
         <Accordion>
           <AccordionSummary expandIcon={<ExpandMoreIcon />}>
             <Typography>How can I download the audit report?</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              {/* Add content here */}
-            </Typography>
+            <Typography>{/* Add content here */}</Typography>
           </AccordionDetails>
         </Accordion>
 
@@ -91,9 +94,7 @@ const UserFeedback = () => {
             <Typography>I am a supplier, how do I get hired?</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              {/* Add content here */}
-            </Typography>
+            <Typography>{/* Add content here */}</Typography>
           </AccordionDetails>
         </Accordion>
 
@@ -103,7 +104,8 @@ const UserFeedback = () => {
           </AccordionSummary>
           <AccordionDetails>
             <Typography>
-              The current project is ... Our team of investing experts make decisions about our portfolio strategies and fund selection with the help of an external committee of economists, PhDs, and industry experts.
+              The current project is ... Our team of investing experts make decisions about our portfolio strategies and
+              fund selection with the help of an external committee of economists, PhDs, and industry experts.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -115,12 +117,7 @@ const UserFeedback = () => {
           <IconButton>
             <KeyboardVoiceIcon />
           </IconButton>
-          <TextField
-            fullWidth
-            variant="standard"
-            placeholder="Type your Message"
-            sx={{ mx: 2 }}
-          />
+          <TextField fullWidth variant="standard" placeholder="Type your Message" sx={{ mx: 2 }} />
           <Avatar src="/api/placeholder/40/40" />
         </Paper>
       </Box>

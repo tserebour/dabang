@@ -44,11 +44,7 @@ const BudgetUtilization = () => {
         Budget Utilization Graph
       </Typography>
 
-      <CustomerSatisfactionChart
-        chartRef={chartRef}
-        data={customerSatisfaction}
-        style={{ height: 182 }}
-      />
+      <CustomerSatisfactionChart chartRef={chartRef} data={customerSatisfaction} style={{ height: 182 }} />
 
       <Stack
         direction="row"

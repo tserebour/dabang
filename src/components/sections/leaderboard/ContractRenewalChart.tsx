@@ -23,7 +23,6 @@ type EChartsOption = echarts.ComposeOption<
 interface TotalRevenueChartProps {
   data: {
     'Online Sales': number[];
-    
   };
   style?: {
     height?: number;
@@ -58,7 +57,20 @@ const ContractRenewalsChart = ({ data, style }: TotalRevenueChartProps) => {
       },
 
       xAxis: {
-        data: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        data: [
+          'January',
+          'February',
+          'March',
+          'April',
+          'May',
+          'June',
+          'July',
+          'August',
+          'September',
+          'October',
+          'November',
+          'December',
+        ],
         axisTick: {
           show: false,
         },
@@ -106,7 +118,6 @@ const ContractRenewalsChart = ({ data, style }: TotalRevenueChartProps) => {
           },
           barCategoryGap: '65%',
         },
-        
       ],
     };
   }, [theme, data, isSm]);

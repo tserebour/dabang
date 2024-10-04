@@ -15,14 +15,7 @@ import { MutableRefObject, useMemo } from 'react';
 import EChartsReactCore from 'echarts-for-react/lib/core';
 import ReactEchart from 'components/base/ReactEhart';
 
-echarts.use([
-  TooltipComponent,
-  GridComponent,
-  LegendComponent,
-  LineChart,
-  CanvasRenderer,
-  UniversalTransition,
-]);
+echarts.use([TooltipComponent, GridComponent, LegendComponent, LineChart, CanvasRenderer, UniversalTransition]);
 
 type EChartsOption = echarts.ComposeOption<
   TooltipComponentOption | GridComponentOption | LegendComponentOption | LineSeriesOption
@@ -132,14 +125,7 @@ const CustomerSatisfactionChart = ({ chartRef, data, style }: CustomerSatisfacti
     return option;
   }, [theme, data]);
 
-  return (
-    <ReactEchart
-      echarts={echarts}
-      option={customerSatisfactionChartOption}
-      ref={chartRef}
-      style={style}
-    />
-  );
+  return <ReactEchart echarts={echarts} option={customerSatisfactionChartOption} ref={chartRef} style={style} />;
 };
 
 export default CustomerSatisfactionChart;

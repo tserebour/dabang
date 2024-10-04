@@ -39,12 +39,7 @@ const Topbar = ({ drawerWidth, onHandleDrawerToggle }: TopbarProps) => {
             gap: { xs: 1, sm: 5 },
           }}
         >
-          <Stack
-            direction="row"
-            alignItems="center"
-            columnGap={{ xs: 1, sm: 2 }}
-            sx={{ display: { lg: 'none' } }}
-          >
+          <Stack direction="row" alignItems="center" columnGap={{ xs: 1, sm: 2 }} sx={{ display: { lg: 'none' } }}>
             <Link href={rootPaths.root}>
               <IconButton color="inherit" aria-label="logo">
                 <Logo sx={{ fontSize: 56 }} />
@@ -56,18 +51,11 @@ const Topbar = ({ drawerWidth, onHandleDrawerToggle }: TopbarProps) => {
             </IconButton>
 
             <IconButton aria-label="search-icon" sx={{ display: { md: 'none' } }}>
-              <IconifyIcon
-                icon="gravity-ui:magnifier"
-                sx={{ color: 'primary.main', fontSize: { xs: 24, sm: 32 } }}
-              />
+              <IconifyIcon icon="gravity-ui:magnifier" sx={{ color: 'primary.main', fontSize: { xs: 24, sm: 32 } }} />
             </IconButton>
           </Stack>
 
-          <Typography
-            variant="h1"
-            color="primary.darker"
-            sx={{ display: { xs: 'none', lg: 'block' } }}
-          >
+          <Typography variant="h1" color="primary.darker" sx={{ display: { xs: 'none', lg: 'block' } }}>
             {pageTitle}
           </Typography>
 
