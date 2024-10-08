@@ -19,6 +19,7 @@ import {
 } from '@mui/material';
 import { Edit, Delete, Upload } from '@mui/icons-material';
 import ReactECharts from 'echarts-for-react';
+import LineChart from 'theme/components/LineChart';
 
 const Leaderboard = () => {
   const procurementStageOption = {
@@ -90,6 +91,14 @@ const Leaderboard = () => {
       {
         data: [100, 150, 120, 280, 250, 190, 180, 100, 220, 300, 280, 260],
         type: 'bar',
+
+        // Adjust the bar width to make the bars thinner
+        barWidth: 15, // You can adjust this to make it thinner or thicker
+
+        itemStyle: {
+          // Apply rounded corners only to the top (top-left and top-right)
+          borderRadius: [20, 20, 0, 0],
+        },
       },
     ],
   };
@@ -156,7 +165,7 @@ const Leaderboard = () => {
                       <TableCell align="right">{row.value}</TableCell>
                       <TableCell>
                         {/* Placeholder for the graph. In a real implementation, you'd use a mini chart here */}
-                        ～～～
+                        <LineChart />
                       </TableCell>
                     </TableRow>
                   ))}

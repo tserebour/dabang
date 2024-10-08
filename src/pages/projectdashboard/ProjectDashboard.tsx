@@ -1,5 +1,5 @@
 // import React from 'react';
-import { Grid, Paper, Typography, Box, LinearProgress, Stack } from '@mui/material';
+import { Grid, Paper, Typography, Box, LinearProgress, Stack, Container } from '@mui/material';
 
 import BudgetUtilization from 'components/sections/projectdashboard/BudgetUtilization';
 import SalesMapping from 'components/sections/dashboard/sales-mapping/SalesMapping';
@@ -97,93 +97,122 @@ const ProjectDashboard = () => {
   // };
 
   return (
-    <Grid container spacing={10}>
-      {/* topside */}
+    <Container maxWidth="xl">
+      <Grid container spacing={10}>
+        {/* topside */}
 
-      <Grid container item xs={12} spacing={5}>
-        <Grid item xs={6}>
-          <SalesMapping />
+        <Grid container item xs={12} spacing={5}>
+          <Grid item xs={6}>
+            <SalesMapping />
+          </Grid>
+
+          <Grid item xs={6}>
+            <Stack spacing={2}>
+              <Grid container spacing={2}>
+                {[
+                  { label: 'Revenue', value: 'R 250 K' },
+                  { label: 'Estimated Budget', value: 'R 3,500' },
+                  { label: 'Predicted Budget', value: 'R 5,387' },
+                  { label: 'Region', value: 'Upper Karoo' },
+                  { label: 'Coverage Area', value: '1500km' },
+                  { label: 'Start and End Date', value: 'Oct 2022 - Mar 2028' },
+                ].map((item) => (
+                  <Grid item xs={4}>
+                    <Paper elevation={3} style={{ padding: '20px', borderRadius: '16px' }}>
+                      <Typography variant="h3" gutterBottom>
+                        {item.label}
+                      </Typography>
+
+                      <Typography variant="h6" gutterBottom>
+                        {item.value}
+                      </Typography>
+                      {/* <LinearProgress variant="determinate" value={80} /> */}
+                    </Paper>
+                  </Grid>
+                ))}
+              </Grid>
+
+              <BudgetUtilization />
+            </Stack>
+          </Grid>
         </Grid>
 
-        <Grid item xs={6}>
-          <Stack spacing={2}>
-            <Grid container spacing={2}>
+        {/* downside */}
+
+        <Grid container item xs={12} spacing={3}>
+          <Grid item xs={12} md={6}>
+            <Paper elevation={3} style={{ padding: '50px' }}>
+              <Typography variant="h6" gutterBottom>
+                Strongest Topics
+              </Typography>
               {[
-                { label: 'Revenue', value: 'R 250 K' },
-                { label: 'Estimated Budget', value: 'R 3,500' },
-                { label: 'Predicted Budget', value: 'R 5,387' },
-                { label: 'Region', value: 'Upper Karoo' },
-                { label: 'Coverage Area', value: '1500km' },
-                { label: 'Start and End Date', value: 'Oct 2022 - Mar 2028' },
-              ].map((item) => (
-                <Grid item xs={4}>
-                  <Paper elevation={3} style={{ padding: '20px' }}>
-                    <Typography variant="h3" gutterBottom>
-                      {item.label}
-                    </Typography>
-
-                    <Typography variant="h6" gutterBottom>
-                      {item.value}
-                    </Typography>
-                    {/* <LinearProgress variant="determinate" value={80} /> */}
-                  </Paper>
-                </Grid>
+                { name: 'Wastewater Treatment Plants', progress: 95 },
+                { name: 'Community Water Supply Systems', progress: 92 },
+                { name: 'Integrated Water Resource Management (IWRM)', progress: 89 },
+              ].map((topic, index) => (
+                <Box key={index} mb={2}>
+                  <Box display="flex" alignItems="center" mb={1}>
+                    <Box
+                      component="img"
+                      width={20}
+                      src={`https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png`}
+                      mr={2}
+                    />
+                    <Typography variant="body1">{topic.name}</Typography>
+                  </Box>
+                  <LinearProgress
+                    variant="determinate"
+                    style={{
+                      borderRadius: '10px',
+                      height: '20px', // Adjust the value for more or less curvature
+                    }}
+                    value={topic.progress}
+                    color="success"
+                  />
+                  <Typography variant="body2" align="right">{`${topic.progress}% Done`}</Typography>
+                </Box>
               ))}
-            </Grid>
+            </Paper>
+          </Grid>
 
-            <BudgetUtilization />
-          </Stack>
+          <Grid item xs={12} md={6}>
+            <Paper elevation={3} style={{ padding: '50px' }}>
+              <Typography variant="h6" gutterBottom>
+                Weakest Topics
+              </Typography>
+              {[
+                { name: 'Desalination Plants', progress: 24 },
+                { name: 'Rainwater Harvesting Systems', progress: 42 },
+                { name: 'Sanitation Infrastructure', progress: 36 },
+              ].map((topic, index) => (
+                <Box key={index} mb={2}>
+                  <Box display="flex" alignItems="center" mb={1}>
+                    <Box
+                      component="img"
+                      width={20}
+                      src={`https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png`}
+                      mr={2}
+                    />
+                    <Typography variant="body1">{topic.name}</Typography>
+                  </Box>
+                  <LinearProgress
+                    variant="determinate"
+                    value={topic.progress}
+                    color="warning"
+                    style={{
+                      borderRadius: '10px',
+                      height: '20px', // Adjust the value for more or less curvature
+                    }}
+                  />
+
+                  <Typography variant="body2" align="right">{`${topic.progress}% Done`}</Typography>
+                </Box>
+              ))}
+            </Paper>
+          </Grid>
         </Grid>
       </Grid>
-
-      {/* downside */}
-
-      <Grid container item xs={12} spacing={3}>
-        <Grid item xs={12} md={6}>
-          <Paper elevation={3} style={{ padding: '20px' }}>
-            <Typography variant="h6" gutterBottom>
-              Strongest Topics
-            </Typography>
-            {[
-              { name: 'Wastewater Treatment Plants', progress: 95 },
-              { name: 'Community Water Supply Systems', progress: 92 },
-              { name: 'Integrated Water Resource Management (IWRM)', progress: 89 },
-            ].map((topic, index) => (
-              <Box key={index} mb={2}>
-                <Box display="flex" alignItems="center" mb={1}>
-                  <Box component="img" src={`/api/placeholder/50/50`} mr={2} />
-                  <Typography variant="body1">{topic.name}</Typography>
-                </Box>
-                <LinearProgress variant="determinate" value={topic.progress} color="success" />
-                <Typography variant="body2" align="right">{`${topic.progress}% Done`}</Typography>
-              </Box>
-            ))}
-          </Paper>
-        </Grid>
-
-        <Grid item xs={12} md={6}>
-          <Paper elevation={3} style={{ padding: '20px' }}>
-            <Typography variant="h6" gutterBottom>
-              Weakest Topics
-            </Typography>
-            {[
-              { name: 'Desalination Plants', progress: 24 },
-              { name: 'Rainwater Harvesting Systems', progress: 42 },
-              { name: 'Sanitation Infrastructure', progress: 36 },
-            ].map((topic, index) => (
-              <Box key={index} mb={2}>
-                <Box display="flex" alignItems="center" mb={1}>
-                  <Box component="img" src={`/api/placeholder/50/50`} mr={2} />
-                  <Typography variant="body1">{topic.name}</Typography>
-                </Box>
-                <LinearProgress variant="determinate" value={topic.progress} color="warning" />
-                <Typography variant="body2" align="right">{`${topic.progress}% Done`}</Typography>
-              </Box>
-            ))}
-          </Paper>
-        </Grid>
-      </Grid>
-    </Grid>
+    </Container>
   );
 };
 

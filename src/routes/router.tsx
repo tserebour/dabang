@@ -5,18 +5,16 @@ import paths, { rootPaths } from './paths';
 const App = lazy(() => import('App'));
 const MainLayout = lazy(() => import('layouts/main-layout'));
 const AuthLayout = lazy(() => import('layouts/auth-layout'));
-const Dashboard = lazy(() => import('pages/dashboard/Dashboard'));
+// const Dashboard = lazy(() => import('pages/dashboard/Dashboard'));
 const SignIn = lazy(() => import('pages/authentication/SignIn'));
 const SignUp = lazy(() => import('pages/authentication/SignUp'));
 const Page404 = lazy(() => import('pages/errors/Page404'));
-// const Feedback = lazy(() => import('pages/errors/Page404'));
+const UserFeedback = lazy(() => import('pages/userfeedback/UserFeedback'));
+const ProjectDashboard = lazy(() => import('pages/projectdashboard/ProjectDashboard'));
+const Leaderboard = lazy(() => import('pages/leaderboard/Leaderboard'));
 
 import PageLoader from 'components/loading/PageLoader';
 import Progress from 'components/loading/Progress';
-import Leaderboard from 'pages/leaderboard/Leaderboard';
-
-import UserFeedback from 'pages/userfeedback/UserFeedback';
-import ProjectDashboard from 'pages/projectdashboard/ProjectDashboard';
 
 export const routes = [
   {
@@ -97,6 +95,6 @@ export const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes, { basename: '/dabang' });
+const router = createBrowserRouter(routes, { basename: '/' });
 
 export default router;
