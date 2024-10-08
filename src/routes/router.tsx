@@ -9,6 +9,7 @@ const Dashboard = lazy(() => import('pages/dashboard/Dashboard'));
 const SignIn = lazy(() => import('pages/authentication/SignIn'));
 const SignUp = lazy(() => import('pages/authentication/SignUp'));
 const Page404 = lazy(() => import('pages/errors/Page404'));
+// const Feedback = lazy(() => import('pages/errors/Page404'));
 
 import PageLoader from 'components/loading/PageLoader';
 import Progress from 'components/loading/Progress';
@@ -37,7 +38,7 @@ export const routes = [
         children: [
           {
             index: true,
-            element: <Dashboard />,
+            element: <Leaderboard />,
           },
         ],
       },
