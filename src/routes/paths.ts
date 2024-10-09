@@ -1,13 +1,13 @@
 export const rootPaths = {
   root: '/',
-  pagesRoot: 'pages',
-  authRoot: 'authentication',
+  pagesRoot: '',
+  authRoot: '',
 };
 
 export default {
-  signin: `/${rootPaths.authRoot}/sign-in`,
-  signup: `/${rootPaths.authRoot}/sign-up`,
-  leaderboard: `/${rootPaths.pagesRoot}/leaderboard`,
-  feedback: `/${rootPaths.pagesRoot}/feedback`,
-  projectdashboard: `/${rootPaths.pagesRoot}/projectdashboard`,
+  signin: `/sign-in`,
+  signup: `/sign-up`,
+  leaderboard: `/leaderboard`,
+  feedback: `/feedback`,
+  projectdashboard: `/projectdashboard`,
 };
