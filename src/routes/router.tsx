@@ -95,6 +95,6 @@ export const routes = [
   },
 ];
 
-const router = createBrowserRouter(routes, { basename: '/dabang' });
+const router = createBrowserRouter(routes, { basename: '/' });
 
 export default router;
